@@ -1,12 +1,8 @@
-<div class="header">
-  <h1>{{title}}</h1>
-  <h2>{{description}}</h2>
-</div>
+<h1>Countries list</h1>
 
-<div class="main">main</div>
+<ul>
+  <li *ngFor="let coutry of countries" (click)="onSelect(coutry)">
+    {{coutry.name}}</li>
+</ul>
 
-<div class="left">left</div>
-
-<div class="right">right</div>
-
-<div class="footer">footer</div>
+<h2 *ngIf="selectedCapital">{{selectedCapital}}</h2>
